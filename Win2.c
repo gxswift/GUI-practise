@@ -147,18 +147,18 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
 	MULTIPAGE_AddPage(hItem, hDialog, "Page 6");
 
 	MULTIPAGE_SetFont(hItem,&GUI_Font20_1);
-	//MULTIPAGE_EnablePage(hItem,1);
-	MULTIPAGE_SelectPage(hItem, 4);
+	MULTIPAGE_EnablePage(hItem,1);
+	//MULTIPAGE_SelectPage(hItem, 4);
 
 
 	hItem = WM_GetDialogItem(pMsg->hWin, ID_RADIO_0);
 	RADIO_SetTextColor(hItem,GUI_RED);
 	RADIO_SetFont(hItem,&GUI_Font32B_1);
 	RADIO_SetText(hItem, "Setting1", 0);
-	RADIO_SetText(hItem, "Setting1", 1);
-	RADIO_SetText(hItem, "Setting1", 2);
-	RADIO_SetText(hItem, "Setting1", 3);
-	RADIO_SetText(hItem, "Setting1", 4);
+	RADIO_SetText(hItem, "Setting2", 1);
+	RADIO_SetText(hItem, "Setting3", 2);
+	RADIO_SetText(hItem, "Setting4", 3);
+	RADIO_SetText(hItem, "Setting5", 4);
 
     // USER START (Optionally insert additional code for further widget initialization)
 
@@ -176,6 +176,8 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
         break;
       case WM_NOTIFICATION_RELEASED:
         // USER START (Optionally insert code for reacting on notification message)
+		  hItem = WM_GetDialogItem(pMsg->hWin, ID_MULTIPAGE_0);
+		  MULTIPAGE_SelectPage(hItem, 4);
         // USER END
         break;
       case WM_NOTIFICATION_MOVED_OUT:
@@ -184,6 +186,8 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
         break;
       case WM_NOTIFICATION_VALUE_CHANGED:
         // USER START (Optionally insert code for reacting on notification message)
+		  hItem = WM_GetDialogItem(pMsg->hWin, ID_MULTIPAGE_0);
+		  MULTIPAGE_SelectPage(hItem, 4);
         // USER END
         break;
       // USER START (Optionally insert additional code for further notification handling)
