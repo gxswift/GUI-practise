@@ -107,6 +107,7 @@ extern WM_HWIN CreateWin2(void);
 extern WM_HWIN CreateWin3(void);
 extern WM_HWIN CreateWin4(void);
 extern WM_HWIN CreateWin5(void);
+extern WM_HWIN CreateWin6(void);
 // USER END
 
 /*********************************************************************
